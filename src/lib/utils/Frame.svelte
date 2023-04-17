@@ -43,7 +43,6 @@
   export let use: Action = noop;
   export let options = {};
 
-
   // your script goes here
   const bgColors = {
     gray: 'bg-gray-50 dark:bg-gray-800',
@@ -64,7 +63,7 @@
     primary: 'bg-primary-50 dark:bg-gray-800 ',
     none: ''
   };
-   
+
   const textColors = {
     gray: 'text-gray-800 dark:text-gray-300',
     red: 'text-red-800 dark:text-red-400',

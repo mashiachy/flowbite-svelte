@@ -69,7 +69,8 @@
     $$props.class
   );
 
-  const closeBtnBaseClass: string = 'inline-flex items-center !p-0.5 !m-0 !ml-2 text-sm bg-transparent rounded-sm focus:!ring-0';
+  const closeBtnBaseClass: string =
+    'inline-flex items-center !p-0.5 !m-0 !ml-2 text-sm bg-transparent rounded-sm focus:!ring-0';
 
   // uncomment the following lines to completely overwrite <CloseButton>'s color palette
   // in case <CloseButton>'s color palette is changed in the future
@@ -97,10 +98,7 @@
   };
 
   let closeBtnClass: string;
-  $: closeBtnClass = classNames(
-    closeBtnBaseClass,
-    closeBtnColors[color]
-  );
+  $: closeBtnClass = classNames(closeBtnBaseClass, closeBtnColors[color]);
 
   let hidden = false;
   const dispatch = createEventDispatcher();
@@ -111,8 +109,8 @@
       hidden = true;
     }, 300);
     dispatch('dismiss', {
-			message: 'The badge will be dismissed.'
-		});
+      message: 'The badge will be dismissed.'
+    });
   };
 </script>
 
@@ -120,7 +118,12 @@
   <slot />
   {#if dismissable}
     <slot name="closeBtn" {handleHide}>
-      <CloseButton {color} on:click={handleHide} size={large ? 'sm' : 'xs'} name="Remove badge" class={closeBtnClass} />
+      <CloseButton
+        {color}
+        on:click={handleHide}
+        size={large ? 'sm' : 'xs'}
+        name="Remove badge"
+        class={closeBtnClass} />
     </slot>
   {/if}
 </svelte:element>

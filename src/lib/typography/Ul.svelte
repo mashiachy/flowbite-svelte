@@ -17,6 +17,6 @@
   console.log('list', list);
 </script>
 
-<ul {...$$restProps} class={classUl} {list}>
+<ul {...$$restProps} class={classUl}>
   <slot />
 </ul>
