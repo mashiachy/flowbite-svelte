@@ -1,8 +1,7 @@
-<script>
-  import classNames from 'classnames';
-  import ToolbarButton from '../toolbar/ToolbarButton.svelte';
-  export let name = undefined;
-  export let vertical = false;
+<script>import classNames from 'classnames';
+import ToolbarButton from '../toolbar/ToolbarButton.svelte';
+export let name = undefined;
+export let vertical = false;
 </script>
 
 <ToolbarButton on:click {name} {...$$restProps} class={classNames($$props.class)} let:svgSize>

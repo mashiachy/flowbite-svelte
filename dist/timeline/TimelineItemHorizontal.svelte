@@ -1,12 +1,11 @@
-<script>
-  // import type { TimelineItemHorizontalType } from '../types';
-  // export let timelineItems: TimelineItemHorizontalType[];
-  export let title;
-  export let date;
-  export let href;
-  export let text;
-  export let linkname;
-  export let icon;
+<script>// import type { TimelineItemHorizontalType } from '../types';
+// export let timelineItems: TimelineItemHorizontalType[];
+export let title;
+export let date;
+export let href;
+export let text;
+export let linkname;
+export let icon;
 </script>
 
 <li class="relative mb-6 sm:mb-0">

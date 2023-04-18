@@ -1,12 +1,10 @@
-<script>
-  export let ratings = [];
-  export let ratings2 = [];
-  export let headerLabel;
-  export let desc1Class =
-    'bg-blue-100 w-8 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800';
-  export let desc2Class = 'ml-2 w-24 font-medium text-gray-900 dark:text-white';
-  export let desc3spanClass = 'mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500';
-  export let desc3pClass = 'text-sm  w-24 font-medium text-gray-500 dark:text-gray-400';
+<script>export let ratings = [];
+export let ratings2 = [];
+export let headerLabel;
+export let desc1Class = 'bg-blue-100 w-8 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800';
+export let desc2Class = 'ml-2 w-24 font-medium text-gray-900 dark:text-white';
+export let desc3spanClass = 'mx-2 w-1 h-1 bg-gray-900 rounded-full dark:bg-gray-500';
+export let desc3pClass = 'text-sm  w-24 font-medium text-gray-500 dark:text-gray-400';
 </script>
 
 <div class="flex items-center mb-5">

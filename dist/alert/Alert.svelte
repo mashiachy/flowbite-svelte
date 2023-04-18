@@ -1,23 +1,22 @@
-<script>
-  import classNames from 'classnames';
-  import { createEventDispatcher } from 'svelte';
-  import CloseButton from '../utils/CloseButton.svelte';
-  import Frame from '../utils/Frame.svelte';
-  const dispatch = createEventDispatcher();
-  export let dismissable = false;
-  export let accent = false;
-  let hidden = false;
-  const handleHide = () => {
+<script>import classNames from 'classnames';
+import { createEventDispatcher } from 'svelte';
+import CloseButton from '../utils/CloseButton.svelte';
+import Frame from '../utils/Frame.svelte';
+const dispatch = createEventDispatcher();
+export let dismissable = false;
+export let accent = false;
+let hidden = false;
+const handleHide = () => {
     hidden = !hidden;
     dispatch('close'); // preferred name
-  };
-  let divClass;
-  $: divClass = classNames('p-4 text-sm', accent && 'border-t-4 ', hidden && 'hidden', $$props.class);
-  $: {
+};
+let divClass;
+$: divClass = classNames('p-4 text-sm', accent && 'border-t-4 ', hidden && 'hidden', $$props.class);
+$: {
     // set default values
     $$restProps.color = $$restProps.color ?? 'blue';
     $$restProps.rounded = $$restProps.rounded ?? !accent;
-  }
+}
 </script>
 
 <Frame {...$$restProps} class={divClass} role="alert">

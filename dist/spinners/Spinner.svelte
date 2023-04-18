@@ -1,16 +1,15 @@
-<script>
-  import classNames from 'classnames';
-  export let color = 'blue';
-  export let bg = 'text-gray-300';
-  export let size = '8';
-  // these two props add fine control over the spinner colors
-  export let currentFill = 'currentFill';
-  export let currentColor = 'currentColor';
-  let iconsize = `w-${size} h-${size}`;
-  if (currentFill !== 'currentFill') {
+<script>import classNames from 'classnames';
+export let color = 'blue';
+export let bg = 'text-gray-300';
+export let size = '8';
+// these two props add fine control over the spinner colors
+export let currentFill = 'currentFill';
+export let currentColor = 'currentColor';
+let iconsize = `w-${size} h-${size}`;
+if (currentFill !== 'currentFill') {
     color = undefined;
-  }
-  const fillColorClasses = {
+}
+const fillColorClasses = {
     blue: 'fill-blue-600',
     gray: 'fill-gray-600 dark:fill-gray-300',
     green: 'fill-green-500',
@@ -19,8 +18,8 @@
     pink: 'fill-pink-600',
     purple: 'fill-purple-600',
     white: 'fill-white'
-  };
-  let fillColorClass = color === undefined ? '' : fillColorClasses[color] ?? fillColorClasses.blue;
+};
+let fillColorClass = color === undefined ? '' : fillColorClasses[color] ?? fillColorClasses.blue;
 </script>
 
 <svg

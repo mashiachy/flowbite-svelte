@@ -1,7 +1,6 @@
-<script>
-  import classNames from 'classnames';
-  import ToolbarButton from '../toolbar/ToolbarButton.svelte';
-  export let name = 'Close';
+<script>import classNames from 'classnames';
+import ToolbarButton from '../toolbar/ToolbarButton.svelte';
+export let name = 'Close';
 </script>
 
 <ToolbarButton on:click {name} {...$$restProps} class={classNames('ml-auto', $$props.class)} let:svgSize>

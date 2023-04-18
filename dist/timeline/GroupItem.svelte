@@ -1,5 +1,4 @@
-<script>
-  export let timelines;
+<script>export let timelines;
 </script>
 
 {#each timelines as { title, src, alt, isPrivate, href, comment }}

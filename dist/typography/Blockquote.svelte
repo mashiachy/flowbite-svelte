@@ -1,19 +1,18 @@
-<script>
-  import classNames from 'classnames';
-  export let border = false;
-  export let italic = true;
-  export let borderClass = 'border-l-4 border-gray-300 dark:border-gray-500';
-  export let bgClass = 'bg-gray-50 dark:bg-gray-800';
-  export let bg = false;
-  export let baseClass = 'font-semibold text-gray-900 dark:text-white';
-  export let alignment = 'left';
-  let alignmentClasses = {
+<script>import classNames from 'classnames';
+export let border = false;
+export let italic = true;
+export let borderClass = 'border-l-4 border-gray-300 dark:border-gray-500';
+export let bgClass = 'bg-gray-50 dark:bg-gray-800';
+export let bg = false;
+export let baseClass = 'font-semibold text-gray-900 dark:text-white';
+export let alignment = 'left';
+let alignmentClasses = {
     left: 'text-left',
     center: 'text-center',
     right: 'text-right'
-  };
-  export let size = 'lg';
-  const sizes = {
+};
+export let size = 'lg';
+const sizes = {
     xs: 'text-xs',
     sm: 'text-sm',
     base: 'text-base',
@@ -27,7 +26,7 @@
     '7xl': 'text-7xl',
     '8xl': 'text-8xl',
     '9xl': 'text-9xl'
-  };
+};
 </script>
 
 <blockquote

@@ -1,14 +1,12 @@
-<script>
-  import classNames from 'classnames';
-  export let progress = '45';
-  export let size = 'h-2.5';
-  export let labelInside = false;
-  export let labelOutside = '';
-  export let color = 'blue';
-  export let labelInsideClass =
-    'text-blue-100 text-xs font-medium text-center p-0.5 leading-none rounded-full';
-  // let barColor: string;
-  const barColors = {
+<script>import classNames from 'classnames';
+export let progress = '45';
+export let size = 'h-2.5';
+export let labelInside = false;
+export let labelOutside = '';
+export let color = 'blue';
+export let labelInsideClass = 'text-blue-100 text-xs font-medium text-center p-0.5 leading-none rounded-full';
+// let barColor: string;
+const barColors = {
     blue: 'bg-blue-600',
     gray: 'bg-gray-600 dark:bg-gray-300',
     red: 'bg-red-600 dark:bg-red-500',
@@ -16,7 +14,7 @@
     yellow: 'bg-yellow-400',
     purple: 'bg-purple-600 dark:bg-purple-500',
     indigo: 'bg-indigo-600 dark:bg-indigo-500'
-  };
+};
 </script>
 
 {#if labelOutside}

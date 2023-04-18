@@ -1,6 +1,5 @@
-<script>
-  export let caption = '';
-  export let captionClass = '';
+<script>export let caption = '';
+export let captionClass = '';
 </script>
 
 <div class={captionClass}>

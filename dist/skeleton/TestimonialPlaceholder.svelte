@@ -1,6 +1,5 @@
-<script>
-  import classNames from 'classnames';
-  export let divClass = 'animate-pulse';
+<script>import classNames from 'classnames';
+export let divClass = 'animate-pulse';
 </script>
 
 <div role="status" class={classNames(divClass, $$props.class)}>

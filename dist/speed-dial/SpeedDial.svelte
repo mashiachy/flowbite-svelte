@@ -1,34 +1,29 @@
-<script context="module">
-  export {};
+<script context="module">export {};
 </script>
 
-<script>
-  import { getContext } from 'svelte';
-  import classNames from 'classnames';
-  import Button from '../buttons/Button.svelte';
-  import Popper from '../utils/Popper.svelte';
-  import { setContext } from 'svelte';
-  import generateId from '../utils/generateId';
-  export let defaultClass = 'fixed right-6 bottom-6';
-  export let placement = 'top';
-  export let pill = true;
-  export let tooltip = 'left';
-  export let trigger = 'hover';
-  export let textOutside = false;
-  export let id = generateId();
-  export let shadow = null;
-  export let outline = false;
-  const group = getContext('group');
-  export let color = group ? (outline ? 'dark' : 'alternative') : 'blue';
-  export let gradient = false;
-  setContext('speed-dial', { pill, tooltip, textOutside });
-  let divClass;
-  $: divClass = classNames(defaultClass, 'group', $$props.class);
-  let poperClass;
-  $: poperClass = classNames(
-    'flex items-center mb-4 gap-2',
-    ['top', 'bottom'].includes(placement) && 'flex-col'
-  );
+<script>import { getContext } from 'svelte';
+import classNames from 'classnames';
+import Button from '../buttons/Button.svelte';
+import Popper from '../utils/Popper.svelte';
+import { setContext } from 'svelte';
+import generateId from '../utils/generateId';
+export let defaultClass = 'fixed right-6 bottom-6';
+export let placement = 'top';
+export let pill = true;
+export let tooltip = 'left';
+export let trigger = 'hover';
+export let textOutside = false;
+export let id = generateId();
+export let shadow = null;
+export let outline = false;
+const group = getContext('group');
+export let color = group ? (outline ? 'dark' : 'alternative') : 'blue';
+export let gradient = false;
+setContext('speed-dial', { pill, tooltip, textOutside });
+let divClass;
+$: divClass = classNames(defaultClass, 'group', $$props.class);
+let poperClass;
+$: poperClass = classNames('flex items-center mb-4 gap-2', ['top', 'bottom'].includes(placement) && 'flex-col');
 </script>
 
 <div class={divClass}>

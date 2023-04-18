@@ -1,5 +1,4 @@
-<script>
-  export let tableBodyClass = undefined;
+<script>export let tableBodyClass = undefined;
 </script>
 
 <tbody class={tableBodyClass}>

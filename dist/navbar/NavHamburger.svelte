@@ -1,8 +1,7 @@
-<script>
-  import ToolbarButton from '../toolbar/ToolbarButton.svelte';
-  import classNames from 'classnames';
-  import Menu from './Menu.svelte';
-  export let btnClass = 'ml-3 md:hidden';
+<script>import ToolbarButton from '../toolbar/ToolbarButton.svelte';
+import classNames from 'classnames';
+import Menu from './Menu.svelte';
+export let btnClass = 'ml-3 md:hidden';
 </script>
 
 <ToolbarButton name="Open main menu" on:click {...$$restProps} class={classNames(btnClass, $$props.class)}>

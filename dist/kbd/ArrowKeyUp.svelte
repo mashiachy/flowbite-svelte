@@ -1,6 +1,5 @@
-<script>
-  import classNames from 'classnames';
-  export let svgClass = 'w-4 h-4';
+<script>import classNames from 'classnames';
+export let svgClass = 'w-4 h-4';
 </script>
 
 <svg

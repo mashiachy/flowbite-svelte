@@ -1,13 +1,12 @@
-<script>
-  import Button from '../buttons/Button.svelte';
-  import Star from './Star.svelte';
-  // default is floor
-  export let ceil = false;
-  export let helpfullink = '';
-  export let abuselink = '';
-  export let comment;
-  let roundedRating = ceil ? Math.ceil(comment.rating) : Math.floor(comment.rating);
-  let grayStars = comment.total - roundedRating;
+<script>import Button from '../buttons/Button.svelte';
+import Star from './Star.svelte';
+// default is floor
+export let ceil = false;
+export let helpfullink = '';
+export let abuselink = '';
+export let comment;
+let roundedRating = ceil ? Math.ceil(comment.rating) : Math.floor(comment.rating);
+let grayStars = comment.total - roundedRating;
 </script>
 
 <article>

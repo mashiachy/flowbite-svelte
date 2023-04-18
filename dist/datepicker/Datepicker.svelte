@@ -1,18 +1,16 @@
-<script>
-  import Calendar from './Calender.svelte';
-  export let range = false;
-  // autoHide not working
-  // export let autoHide: boolean = false;
-  export let datepickerButtons = false;
-  export let datepickerFormat = 'mm/dd/yyyy';
-  export let datepickerOrientation = 'bottom';
-  export let datepickerTitle = 'Flowbite datepicker';
-  export let attribute = '';
-  export let inputClass =
-    'bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500';
-  $: setAttribute = (node, params) => {
+<script>import Calendar from './Calender.svelte';
+export let range = false;
+// autoHide not working
+// export let autoHide: boolean = false;
+export let datepickerButtons = false;
+export let datepickerFormat = 'mm/dd/yyyy';
+export let datepickerOrientation = 'bottom';
+export let datepickerTitle = 'Flowbite datepicker';
+export let attribute = '';
+export let inputClass = 'bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500';
+$: setAttribute = (node, params) => {
     node.setAttribute(params, '');
-  };
+};
 </script>
 
 <svelte:head>

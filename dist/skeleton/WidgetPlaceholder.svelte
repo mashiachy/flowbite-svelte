@@ -1,7 +1,5 @@
-<script>
-  import classNames from 'classnames';
-  export let divClass =
-    'p-4 max-w-sm rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-gray-700';
+<script>import classNames from 'classnames';
+export let divClass = 'p-4 max-w-sm rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-gray-700';
 </script>
 
 <div role="status" class={classNames(divClass, $$props.class)}>

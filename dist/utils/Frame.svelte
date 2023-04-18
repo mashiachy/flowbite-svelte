@@ -1,24 +1,23 @@
-<script>
-  import classNames from 'classnames';
-  import { setContext } from 'svelte';
-  import { noop } from 'svelte/internal';
-  setContext('background', true);
-  $: setContext('color', color);
-  export let tag = 'div';
-  export let color = 'default';
-  export let rounded = false;
-  export let border = false;
-  export let shadow = false;
-  // Export a prop through which you can set a desired svelte transition
-  export let transition = undefined;
-  // Pass in extra transition params
-  export let params = {};
-  // For components development
-  export let node = undefined;
-  export let use = noop;
-  export let options = {};
-  // your script goes here
-  const bgColors = {
+<script>import classNames from 'classnames';
+import { setContext } from 'svelte';
+import { noop } from 'svelte/internal';
+setContext('background', true);
+$: setContext('color', color);
+export let tag = 'div';
+export let color = 'default';
+export let rounded = false;
+export let border = false;
+export let shadow = false;
+// Export a prop through which you can set a desired svelte transition
+export let transition = undefined;
+// Pass in extra transition params
+export let params = {};
+// For components development
+export let node = undefined;
+export let use = noop;
+export let options = {};
+// your script goes here
+const bgColors = {
     gray: 'bg-gray-50 dark:bg-gray-800',
     red: 'bg-red-50 dark:bg-gray-800',
     yellow: 'bg-yellow-50 dark:bg-gray-800 ',
@@ -36,8 +35,8 @@
     form: 'bg-gray-50 dark:bg-gray-700',
     primary: 'bg-primary-50 dark:bg-gray-800 ',
     none: ''
-  };
-  const textColors = {
+};
+const textColors = {
     gray: 'text-gray-800 dark:text-gray-300',
     red: 'text-red-800 dark:text-red-400',
     yellow: 'text-yellow-800 dark:text-yellow-300',
@@ -55,8 +54,8 @@
     form: 'text-gray-900 dark:text-white',
     primary: 'text-primary-800 dark:text-primary-400',
     none: ''
-  };
-  const borderColors = {
+};
+const borderColors = {
     gray: 'border-gray-300 dark:border-gray-800',
     red: 'border-red-300 dark:border-red-800',
     yellow: 'border-yellow-300 dark:border-yellow-800',
@@ -74,17 +73,9 @@
     form: 'border-gray-300 dark:border-gray-700',
     primary: 'border-primary-500 dark:bg-primary-200 ',
     none: ''
-  };
-  let divClass;
-  $: divClass = classNames(
-    bgColors[color],
-    textColors[color],
-    rounded && (color === 'dropdown' ? 'rounded' : 'rounded-lg'),
-    border && 'border',
-    borderColors[color],
-    shadow && 'shadow-md',
-    $$props.class
-  );
+};
+let divClass;
+$: divClass = classNames(bgColors[color], textColors[color], rounded && (color === 'dropdown' ? 'rounded' : 'rounded-lg'), border && 'border', borderColors[color], shadow && 'shadow-md', $$props.class);
 </script>
 
 {#if transition}

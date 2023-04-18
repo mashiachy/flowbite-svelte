@@ -1,9 +1,8 @@
-<script>
-  import classNames from 'classnames';
-  import Popper from '../utils/Popper.svelte';
-  export let open = false;
-  export let frameClass = '';
-  $: {
+<script>import classNames from 'classnames';
+import Popper from '../utils/Popper.svelte';
+export let open = false;
+export let frameClass = '';
+$: {
     // set default values
     $$restProps.arrow = $$restProps.arrow ?? false;
     $$restProps.trigger = $$restProps.trigger ?? 'click';
@@ -11,9 +10,9 @@
     $$restProps.color = $$restProps.color ?? 'dropdown';
     $$restProps.shadow = $$restProps.shadow ?? true;
     $$restProps.rounded = $$restProps.rounded ?? true;
-  }
-  let popoverClass;
-  $: popoverClass = classNames('divide-y divide-gray-100 dark:divide-gray-600', frameClass);
+}
+let popoverClass;
+$: popoverClass = classNames('divide-y divide-gray-100 dark:divide-gray-600', frameClass);
 </script>
 
 <Popper activeContent {...$$restProps} class={popoverClass} on:show bind:open>

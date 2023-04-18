@@ -1,23 +1,20 @@
-<script>
-  import classNames from 'classnames';
-  import { createEventDispatcher, setContext } from 'svelte';
-  import PaginationItem from './PaginationItem.svelte';
-  export let pages = [];
-  export let activeClass =
-    'text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white';
-  export let normalClass =
-    'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white';
-  export let ulClass = 'inline-flex -space-x-px items-center';
-  export let table = false;
-  const dispatch = createEventDispatcher();
-  setContext('group', true);
-  setContext('table', table);
-  const previous = () => {
+<script>import classNames from 'classnames';
+import { createEventDispatcher, setContext } from 'svelte';
+import PaginationItem from './PaginationItem.svelte';
+export let pages = [];
+export let activeClass = 'text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white';
+export let normalClass = 'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white';
+export let ulClass = 'inline-flex -space-x-px items-center';
+export let table = false;
+const dispatch = createEventDispatcher();
+setContext('group', true);
+setContext('table', table);
+const previous = () => {
     dispatch('previous');
-  };
-  const next = () => {
+};
+const next = () => {
     dispatch('next');
-  };
+};
 </script>
 
 <nav aria-label="Page navigation">

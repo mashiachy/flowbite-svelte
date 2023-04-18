@@ -1,11 +1,8 @@
-<script>
-  export let home = false;
-  export let href = undefined;
-  export let linkClass =
-    'ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white';
-  export let spanClass = 'ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400';
-  export let homeClass =
-    'inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
+<script>export let home = false;
+export let href = undefined;
+export let linkClass = 'ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white';
+export let spanClass = 'ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400';
+export let homeClass = 'inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
 </script>
 
 <li class="inline-flex items-center" {...$$restProps}>

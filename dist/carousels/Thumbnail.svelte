@@ -1,10 +1,9 @@
-<script>
-  export let thumbImg = '';
-  export let altTag = '';
-  export let titleLink = '';
-  export let id;
-  export let thumbWidth;
-  export let selected = false;
+<script>export let thumbImg = '';
+export let altTag = '';
+export let titleLink = '';
+export let id;
+export let thumbWidth;
+export let selected = false;
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -21,5 +20,4 @@
 <style>
   .active {
     opacity: 1;
-  }
-</style>
+  }</style>

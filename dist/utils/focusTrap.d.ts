@@ -1,4 +1,4 @@
 export default function focusTrap(node: HTMLElement): {
-  destroy(): void;
+    destroy(): void;
 };
 //# sourceMappingURL=focusTrap.d.ts.map

@@ -1,12 +1,11 @@
-<script>
-  import classNames from 'classnames';
-  export let steps = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
-  export let currentStep = 1;
-  export let size = 'h-2.5';
-  export let color = 'blue';
-  export let glow = false;
-  export let hideLabel = false;
-  const completedStepColors = {
+<script>import classNames from 'classnames';
+export let steps = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
+export let currentStep = 1;
+export let size = 'h-2.5';
+export let color = 'blue';
+export let glow = false;
+export let hideLabel = false;
+const completedStepColors = {
     gray: 'bg-gray-400 dark:bg-gray-500',
     red: 'bg-red-600 dark:bg-red-900',
     yellow: 'bg-yellow-400 dark:bg-yellow-600',
@@ -15,8 +14,8 @@
     purple: 'bg-purple-500 dark:bg-purple-900',
     pink: 'bg-pink-500 dark:bg-pink-900',
     blue: 'bg-blue-500 dark:bg-blue-900'
-  };
-  const currentStepColors = {
+};
+const currentStepColors = {
     gray: 'bg-gray-700 dark:bg-gray-200',
     red: 'bg-red-900 dark:bg-red-500',
     yellow: 'bg-yellow-600 dark:bg-yellow-400',
@@ -25,7 +24,7 @@
     purple: 'bg-purple-800 dark:bg-purple-400',
     pink: 'bg-pink-800 dark:bg-pink-400',
     blue: 'bg-blue-800 dark:bg-blue-400'
-  };
+};
 </script>
 
 <div {...$$restProps} class={classNames('space-y-2 dark:text-white', $$props.class)}>

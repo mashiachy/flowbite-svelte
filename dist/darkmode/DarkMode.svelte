@@ -1,19 +1,17 @@
-<script>
-  import { onMount } from 'svelte';
-  import classNames from 'classnames';
-  export let btnClass =
-    'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5';
-  let toggleTheme;
-  onMount(() => {
+<script>import { onMount } from 'svelte';
+import classNames from 'classnames';
+export let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5';
+let toggleTheme;
+onMount(() => {
     localStorage.getItem('color-theme') === 'dark' ||
-    (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ? window.document.documentElement.classList.add('dark')
-      : window.document.documentElement.classList.remove('dark');
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ? window.document.documentElement.classList.add('dark')
+        : window.document.documentElement.classList.remove('dark');
     toggleTheme = () => {
-      const isDark = window.document.documentElement.classList.toggle('dark');
-      localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+        const isDark = window.document.documentElement.classList.toggle('dark');
+        localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
     };
-  });
+});
 </script>
 
 <button

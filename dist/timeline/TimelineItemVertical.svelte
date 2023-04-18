@@ -1,8 +1,7 @@
-<script>
-  // import type { TimelineItemVerticalType } from '../types';
-  // export let timelineItems: TimelineItemVerticalType[];
-  export let title;
-  export let date;
+<script>// import type { TimelineItemVerticalType } from '../types';
+// export let timelineItems: TimelineItemVerticalType[];
+export let title;
+export let date;
 </script>
 
 <li class="mb-10 ml-6">

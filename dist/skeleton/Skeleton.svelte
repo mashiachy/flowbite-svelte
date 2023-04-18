@@ -1,15 +1,14 @@
-<script>
-  import classNames from 'classnames';
-  const sizes = {
+<script>import classNames from 'classnames';
+const sizes = {
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
     xl: 'max-w-xl',
     xxl: 'max-w-2xl'
-  };
-  export let divClass = 'animate-pulse';
-  export let size = 'sm';
-  $: outDivclass = classNames(sizes[size], divClass, $$props.class);
+};
+export let divClass = 'animate-pulse';
+export let size = 'sm';
+$: outDivclass = classNames(sizes[size], divClass, $$props.class);
 </script>
 
 <div role="status" class={outDivclass}>

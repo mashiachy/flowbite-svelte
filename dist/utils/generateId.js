@@ -1,4 +1,4 @@
 let n = Date.now();
 export default function () {
-  return (++n).toString(36);
+    return (++n).toString(36);
 }

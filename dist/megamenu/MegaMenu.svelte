@@ -1,18 +1,12 @@
-<script>
-  import classNames from 'classnames';
-  import Popper from '../utils/Popper.svelte';
-  export let items = [];
-  export let full = false;
-  export let open = false;
-  let wrapperClass;
-  $: wrapperClass = classNames(full && 'border-y w-full', $$props.class);
-  let ulClass;
-  $: ulClass = classNames(
-    'grid grid-flow-row gap-y-4 md:gap-x-0 auto-col-max auto-row-max',
-    full && $$slots.extra ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3',
-    'text-sm font-medium',
-    full && $$slots.extra && 'md:w-2/3'
-  );
+<script>import classNames from 'classnames';
+import Popper from '../utils/Popper.svelte';
+export let items = [];
+export let full = false;
+export let open = false;
+let wrapperClass;
+$: wrapperClass = classNames(full && 'border-y w-full', $$props.class);
+let ulClass;
+$: ulClass = classNames('grid grid-flow-row gap-y-4 md:gap-x-0 auto-col-max auto-row-max', full && $$slots.extra ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3', 'text-sm font-medium', full && $$slots.extra && 'md:w-2/3');
 </script>
 
 <Popper

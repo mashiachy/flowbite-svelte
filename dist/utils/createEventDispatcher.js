@@ -8,15 +8,15 @@
 */
 import { get_current_component } from 'svelte/internal';
 export default function createEventDispatcher() {
-  const component = get_current_component();
-  return (type, target, detail) => {
-    const callbacks = component.$$.callbacks[type];
-    if (callbacks) {
-      const event = new CustomEvent(type, { detail });
-      target.dispatchEvent(event);
-      callbacks.slice().forEach((fn) => {
-        fn.call(component, event);
-      });
-    }
-  };
+    const component = get_current_component();
+    return (type, target, detail) => {
+        const callbacks = component.$$.callbacks[type];
+        if (callbacks) {
+            const event = new CustomEvent(type, { detail });
+            target.dispatchEvent(event);
+            callbacks.slice().forEach((fn) => {
+                fn.call(component, event);
+            });
+        }
+    };
 }

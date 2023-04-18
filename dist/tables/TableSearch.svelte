@@ -1,13 +1,12 @@
-<script>
-  import classNames from 'classnames';
-  import { setContext } from 'svelte';
-  export let divClass = 'relative overflow-x-auto shadow-md sm:rounded-lg';
-  export let inputValue = '';
-  export let striped = false;
-  export let hoverable = false;
-  export let placeholder = 'Search';
-  export let color = 'default';
-  const colors = {
+<script>import classNames from 'classnames';
+import { setContext } from 'svelte';
+export let divClass = 'relative overflow-x-auto shadow-md sm:rounded-lg';
+export let inputValue = '';
+export let striped = false;
+export let hoverable = false;
+export let placeholder = 'Search';
+export let color = 'default';
+const colors = {
     default: 'text-gray-500 dark:text-gray-400',
     blue: 'text-blue-100 dark:text-blue-100',
     green: 'text-green-100 dark:text-green-100',
@@ -15,10 +14,10 @@
     yellow: 'text-yellow-100 dark:text-yellow-100',
     purple: 'text-purple-100 dark:text-purple-100',
     custom: ''
-  };
-  $: setContext('striped', striped);
-  $: setContext('hoverable', hoverable);
-  $: setContext('color', color);
+};
+$: setContext('striped', striped);
+$: setContext('hoverable', hoverable);
+$: setContext('color', color);
 </script>
 
 <div class={divClass}>

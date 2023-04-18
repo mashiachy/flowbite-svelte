@@ -1,15 +1,14 @@
-<script>
-  import Star from './Star.svelte';
-  import classNames from 'classnames';
-  export let divClass = 'flex items-center';
-  export let size = '24';
-  export let total = 5;
-  export let rating = 4;
-  // default is floor
-  export let ceil = false;
-  export let count = false;
-  let roundedRating = ceil ? Math.ceil(rating) : Math.floor(rating);
-  let grayStars = total - roundedRating;
+<script>import Star from './Star.svelte';
+import classNames from 'classnames';
+export let divClass = 'flex items-center';
+export let size = '24';
+export let total = 5;
+export let rating = 4;
+// default is floor
+export let ceil = false;
+export let count = false;
+let roundedRating = ceil ? Math.ceil(rating) : Math.floor(rating);
+let grayStars = total - roundedRating;
 </script>
 
 <div class={classNames(divClass, $$props.class)}>

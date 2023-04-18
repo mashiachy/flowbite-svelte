@@ -1,11 +1,10 @@
-<script>
-  import classNames from 'classnames';
-  export let review;
-  export let articleClass = 'md:gap-8 md:grid md:grid-cols-3';
-  export let divClass = 'flex items-center mb-6 space-x-4';
-  export let imgClass = 'w-10 h-10 rounded-full';
-  export let ulClass = 'space-y-4 text-sm text-gray-500 dark:text-gray-400';
-  export let liClass = 'flex items-center';
+<script>import classNames from 'classnames';
+export let review;
+export let articleClass = 'md:gap-8 md:grid md:grid-cols-3';
+export let divClass = 'flex items-center mb-6 space-x-4';
+export let imgClass = 'w-10 h-10 rounded-full';
+export let ulClass = 'space-y-4 text-sm text-gray-500 dark:text-gray-400';
+export let liClass = 'flex items-center';
 </script>
 
 <article class={classNames(articleClass, $$props.classArticle)}>

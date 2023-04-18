@@ -1,6 +1,5 @@
-<script>
-  import classNames from 'classnames';
-  export let padding = 'px-6 py-3';
+<script>import classNames from 'classnames';
+export let padding = 'px-6 py-3';
 </script>
 
 <th {...$$restProps} class={classNames(padding, $$props.class)}>

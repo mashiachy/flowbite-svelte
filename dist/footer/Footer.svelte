@@ -1,8 +1,7 @@
-<script>
-  import classNames from 'classnames';
-  export let customClass = '';
-  export let footerType = 'default';
-  // using classNames dynamic class names, https://github.com/JedWatson/classnames#dynamic-class-names-with-es2015
+<script>import classNames from 'classnames';
+export let customClass = '';
+export let footerType = 'default';
+// using classNames dynamic class names, https://github.com/JedWatson/classnames#dynamic-class-names-with-es2015
 </script>
 
 <footer

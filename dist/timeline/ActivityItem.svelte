@@ -1,5 +1,4 @@
-<script>
-  export let activities;
+<script>export let activities;
 </script>
 
 {#each activities as { title, date, src, alt, text }}

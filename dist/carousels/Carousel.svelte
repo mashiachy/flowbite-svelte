@@ -1,47 +1,48 @@
-<script>
-  import Slide from './Slide.svelte';
-  import Thumbnail from './Thumbnail.svelte';
-  import Caption from './Caption.svelte';
-  import Indicator from './Indicator.svelte';
-  export let showIndicators = true;
-  export let showCaptions = true;
-  export let showThumbs = true;
-  export let images;
-  export let slideControls = true;
-  export let loop = false;
-  export let duration = 2000;
-  // Carousel
-  export let divClass = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
-  export let indicatorDivClass = 'flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2';
-  // Caption
-  export let captionClass = 'h-10 bg-gray-300 dark:bg-gray-700 dark:text-white p-2 my-2 text-center';
-  // Indicator
-  export let indicatorClass = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
-  // Slide
-  export let slideClass = '';
-  let imageShowingIndex = 0;
-  $: image = images[imageShowingIndex];
-  const nextSlide = () => {
+<script>import Slide from './Slide.svelte';
+import Thumbnail from './Thumbnail.svelte';
+import Caption from './Caption.svelte';
+import Indicator from './Indicator.svelte';
+export let showIndicators = true;
+export let showCaptions = true;
+export let showThumbs = true;
+export let images;
+export let slideControls = true;
+export let loop = false;
+export let duration = 2000;
+// Carousel
+export let divClass = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
+export let indicatorDivClass = 'flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2';
+// Caption
+export let captionClass = 'h-10 bg-gray-300 dark:bg-gray-700 dark:text-white p-2 my-2 text-center';
+// Indicator
+export let indicatorClass = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
+// Slide
+export let slideClass = '';
+let imageShowingIndex = 0;
+$: image = images[imageShowingIndex];
+const nextSlide = () => {
     if (imageShowingIndex === images.length - 1) {
-      imageShowingIndex = 0;
-    } else {
-      imageShowingIndex += 1;
+        imageShowingIndex = 0;
     }
-  };
-  const prevSlide = () => {
+    else {
+        imageShowingIndex += 1;
+    }
+};
+const prevSlide = () => {
     if (imageShowingIndex === 0) {
-      imageShowingIndex = images.length - 1;
-    } else {
-      imageShowingIndex -= 1;
+        imageShowingIndex = images.length - 1;
     }
-  };
-  const goToSlide = (number) => (imageShowingIndex = number);
-  let thumbWidth = 100 / images.length;
-  if (loop) {
+    else {
+        imageShowingIndex -= 1;
+    }
+};
+const goToSlide = (number) => (imageShowingIndex = number);
+let thumbWidth = 100 / images.length;
+if (loop) {
     setInterval(() => {
-      nextSlide();
+        nextSlide();
     }, duration);
-  }
+}
 </script>
 
 <div id="default-carousel" class="relative">

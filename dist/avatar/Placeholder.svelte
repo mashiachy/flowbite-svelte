@@ -1,5 +1,4 @@
-<script>
-  export let rounded = false;
+<script>export let rounded = false;
 </script>
 
 <svg

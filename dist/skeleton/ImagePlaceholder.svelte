@@ -1,7 +1,6 @@
-<script>
-  import classNames from 'classnames';
-  export let divClass = 'space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center';
-  export let imgHeight = '48';
+<script>import classNames from 'classnames';
+export let divClass = 'space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center';
+export let imgHeight = '48';
 </script>
 
 <div role="status" class={classNames(divClass, $$props.class)}>

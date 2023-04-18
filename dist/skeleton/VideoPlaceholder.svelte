@@ -1,16 +1,14 @@
-<script>
-  const sizes = {
+<script>const sizes = {
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
     xl: 'max-w-xl',
     xxl: 'max-w-2xl'
-  };
-  import classNames from 'classnames';
-  export let divClass =
-    'flex justify-center items-center h-56 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700';
-  export let size = 'sm';
-  $: outDivclass = classNames(sizes[size], divClass, $$props.class);
+};
+import classNames from 'classnames';
+export let divClass = 'flex justify-center items-center h-56 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700';
+export let size = 'sm';
+$: outDivclass = classNames(sizes[size], divClass, $$props.class);
 </script>
 
 <div role="status" class={outDivclass}>

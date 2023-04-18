@@ -1,8 +1,6 @@
-<script>
-  export let divClass =
-    'p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700';
-  export let timeClass = 'text-lg font-semibold text-gray-900 dark:text-white';
-  export let date;
+<script>export let divClass = 'p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700';
+export let timeClass = 'text-lg font-semibold text-gray-900 dark:text-white';
+export let date;
 </script>
 
 <div class={divClass}>

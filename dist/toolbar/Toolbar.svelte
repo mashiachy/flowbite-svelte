@@ -1,15 +1,14 @@
-<script>
-  import { setContext } from 'svelte';
-  import { writable } from 'svelte/store';
-  import classNames from 'classnames';
-  import Frame from '../utils/Frame.svelte';
-  const separators = writable(false);
-  setContext('toolbar', separators);
-  export let color = 'dark';
-  export let embedded = false;
-  let divClass;
-  $: divClass = classNames('flex justify-between items-center', embedded || 'p-2', $$props.class);
-  const divideColors = {
+<script>import { setContext } from 'svelte';
+import { writable } from 'svelte/store';
+import classNames from 'classnames';
+import Frame from '../utils/Frame.svelte';
+const separators = writable(false);
+setContext('toolbar', separators);
+export let color = 'dark';
+export let embedded = false;
+let divClass;
+$: divClass = classNames('flex justify-between items-center', embedded || 'p-2', $$props.class);
+const divideColors = {
     gray: 'divide-gray-400 dark:divide-gray-700',
     red: 'divide-red-400 dark:divide-red-700',
     yellow: 'divide-yellow-400 dark:divide-yellow-700',
@@ -20,9 +19,9 @@
     blue: 'divide-blue-400 dark:divide-blue-700',
     dark: 'divide-gray-400 dark:divide-gray-600',
     none: ''
-  };
-  let separatorsClass;
-  $: separatorsClass = classNames($separators && 'sm:divide-x', divideColors[color]);
+};
+let separatorsClass;
+$: separatorsClass = classNames($separators && 'sm:divide-x', divideColors[color]);
 </script>
 
 <Frame class={divClass} color={embedded ? 'none' : color} rounded={!embedded}>

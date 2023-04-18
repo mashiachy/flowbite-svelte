@@ -1,14 +1,13 @@
-<script>
-  import Wrapper from '../utils/Wrapper.svelte';
-  import Input from './Input.svelte';
-  export let size = 'lg';
-  export let placeholder = 'Search';
-  export let value = '';
-  const sizes = {
+<script>import Wrapper from '../utils/Wrapper.svelte';
+import Input from './Input.svelte';
+export let size = 'lg';
+export let placeholder = 'Search';
+export let value = '';
+const sizes = {
     sm: 'w-3.5 h-3.5',
     md: 'w-5 h-5',
     lg: 'w-6 h-6'
-  };
+};
 </script>
 
 <Wrapper class="relative w-full" show={$$slots.default}>

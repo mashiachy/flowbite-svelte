@@ -1,7 +1,6 @@
-<script>
-  import Popper from '../utils/Popper.svelte';
-  export let title = '';
-  export let defaultClass = 'py-2 px-3';
+<script>import Popper from '../utils/Popper.svelte';
+export let title = '';
+export let defaultClass = 'py-2 px-3';
 </script>
 
 <Popper data-popover activeContent border shadow rounded {...$$restProps} class={$$props.class} on:show>

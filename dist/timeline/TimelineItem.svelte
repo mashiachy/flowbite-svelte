@@ -1,44 +1,38 @@
-<script>
-  import classNames from 'classnames';
-  import { getContext } from 'svelte';
-  export let title = '';
-  export let date = '';
-  export let customDiv = '';
-  export let customTimeClass = '';
-  let order = 'default';
-  order = getContext('order');
-  const liClasses = {
+<script>import classNames from 'classnames';
+import { getContext } from 'svelte';
+export let title = '';
+export let date = '';
+export let customDiv = '';
+export let customTimeClass = '';
+let order = 'default';
+order = getContext('order');
+const liClasses = {
     default: 'mb-10 ml-4',
     vertical: 'mb-10 ml-6',
     horizontal: 'relative mb-6 sm:mb-0',
     activity: 'mb-10 ml-6',
     group: '',
     custom: ''
-  };
-  const divClasses = {
-    default:
-      'absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700',
-    vertical:
-      'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900',
+};
+const divClasses = {
+    default: 'absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700',
+    vertical: 'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900',
     horizontal: 'flex items-center',
-    activity:
-      'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900',
+    activity: 'flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900',
     group: 'p-5 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700',
     custom: customDiv
-  };
-  const timeClasses = {
+};
+const timeClasses = {
     default: 'mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500',
     vertical: 'block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500',
     horizontal: 'block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500',
     activity: 'mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0',
     group: 'text-lg font-semibold text-gray-900 dark:text-white',
     custom: customTimeClass
-  };
-  const h3Class = classNames(
-    order === 'vertical'
-      ? 'flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'
-      : 'text-lg font-semibold text-gray-900 dark:text-white'
-  );
+};
+const h3Class = classNames(order === 'vertical'
+    ? 'flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'
+    : 'text-lg font-semibold text-gray-900 dark:text-white');
 </script>
 
 <li class={liClasses[order]}>

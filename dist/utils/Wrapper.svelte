@@ -1,7 +1,6 @@
-<script>
-  export let tag = 'div';
-  export let show;
-  export let use = () => {};
+<script>export let tag = 'div';
+export let show;
+export let use = () => { };
 </script>
 
 {#if show}

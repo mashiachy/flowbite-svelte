@@ -1,19 +1,18 @@
-<script>
-  import ChevronDown from './ChevronDown.svelte';
-  import ChevronLeft from './ChevronLeft.svelte';
-  import ChevronUp from './ChevronUp.svelte';
-  import ChevronRight from './ChevronRight.svelte';
-  import Wrapper from './Wrapper.svelte';
-  export let placement = 'bottom';
-  export let aligned = false;
-  const icons = {
+<script>import ChevronDown from './ChevronDown.svelte';
+import ChevronLeft from './ChevronLeft.svelte';
+import ChevronUp from './ChevronUp.svelte';
+import ChevronRight from './ChevronRight.svelte';
+import Wrapper from './Wrapper.svelte';
+export let placement = 'bottom';
+export let aligned = false;
+const icons = {
     top: ChevronUp,
     right: ChevronRight,
     bottom: ChevronDown,
     left: ChevronLeft
-  };
-  let icon;
-  $: icon = icons[placement.split('-')[0]] ?? ChevronDown;
+};
+let icon;
+$: icon = icons[placement.split('-')[0]] ?? ChevronDown;
 </script>
 
 <Wrapper class="flex items-center justify-between" show={aligned}>
