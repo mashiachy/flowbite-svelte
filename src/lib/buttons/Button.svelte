@@ -41,9 +41,9 @@
     blue: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
     dark: 'text-white bg-gray-800 hover:bg-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700',
     alternative:
-      'text-gray-900 bg-white border border-gray-200 dark:border-gray-600 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 hover:text-blue-700 focus:text-blue-700 dark:focus:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700',
+      'text-primary-700 bg-white hover:bg-primary-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 hover:text-blue-700 focus:text-blue-700 dark:focus:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700',
     light:
-      'text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700',
+      'text-gray-900 bg-primary-100 hover:bg-primary-50 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700',
     green:
       'text-white bg-green-700 hover:bg-green-800 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800',
     red: 'text-white bg-red-700 hover:bg-red-800 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900',
@@ -107,11 +107,11 @@
   } satisfies { [k in typeof color]?: string };
 
   const sizeClasses = {
-    xs: 'px-3 py-2 text-xs',
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-5 py-2.5 text-sm',
-    lg: 'px-5 py-3 text-base',
-    xl: 'px-6 py-3.5 text-base'
+    xs: 'px-3 py-2 text-sm font-medium rounded-xl',
+    sm: 'px-3 py-2.5 text-sm font-medium rounded-xl',
+    md: 'px-5 py-3 text-sm font-medium rounded-xl',
+    lg: 'px-5 py-3 text-base font-medium rounded-xl',
+    xl: 'px-6 py-4 text-base font-medium rounded-2xl'
   };
 
   function rounded(gradientOutline: boolean = false) {
@@ -122,7 +122,7 @@
         ? 'first:rounded-l-md last:rounded-r-md'
         : 'first:rounded-l-lg last:rounded-r-lg';
     }
-    return pill ? 'rounded-full' : gradientOutline ? 'rounded-md' : 'rounded-lg';
+    return pill ? 'rounded-full' : gradientOutline ? 'rounded-md' : '';
   }
 
   const hasBorder = () => outline || color === 'alternative' || color === 'light';
