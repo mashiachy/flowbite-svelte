@@ -105,7 +105,7 @@
     purple:
       'text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-purple-300 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900',
     primary:
-      'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800' // TODO: fix dark styles
+      'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:bg-primary-700 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800' // TODO: fix dark styles
   } satisfies { [k in typeof color]?: string };
 
   const sizeClasses = {

@@ -56,7 +56,7 @@ const outlineClasses = {
     red: 'text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900',
     yellow: 'text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900',
     purple: 'text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-purple-300 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900',
-    primary: 'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800' // TODO: fix dark styles
+    primary: 'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:bg-primary-700 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800' // TODO: fix dark styles
 };
 const sizeClasses = {
     xs: 'px-3 py-2 text-sm font-medium rounded-xl',
