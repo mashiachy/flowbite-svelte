@@ -14,6 +14,7 @@
   export let type: ButtonType = 'button';
 
   export let color:
+    | 'primary-light'
     | 'alternative'
     | 'blue'
     | 'cyan'
@@ -50,6 +51,8 @@
     yellow: 'text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-yellow-300 dark:focus:ring-yellow-900',
     primary:
       'text-white bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800',
+    'primary-light':
+      'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:bg-primary-700 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800', // TODO: fix dark styles
     purple:
       'text-white bg-purple-700 hover:bg-purple-800 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900'
   } satisfies { [k in typeof color]?: string };
@@ -105,7 +108,7 @@
     purple:
       'text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-purple-300 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900',
     primary:
-      'text-primary-700 bg-primary-100 hover:bg-primary-50 focus:bg-primary-700 focus:ring-primary-300 focus:text-white dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800' // TODO: fix dark styles
+      'text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-700 focus:ring-primary-300 dark:border-primary-400 dark:text-primary-400 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-900'
   } satisfies { [k in typeof color]?: string };
 
   const sizeClasses = {
