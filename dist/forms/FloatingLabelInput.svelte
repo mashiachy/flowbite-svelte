@@ -7,6 +7,7 @@ export let size = 'default';
 export let color = 'base';
 export let value = '';
 export let label = '';
+export let input = undefined;
 const divClasses = {
     filled: 'relative',
     outlined: 'relative',
@@ -15,7 +16,7 @@ const divClasses = {
 const inputSizes = {
     filled: {
         small: 'px-2.5 pb-1.5 pt-4',
-        default: 'px-3 pb-2 pt-5',
+        default: 'px-3 pb-2 pt-5'
     },
     outlined: {
         small: 'px-2.5 pb-1.5 pt-3',
@@ -76,6 +77,7 @@ function setType(node, _type) {
     {id}
     {...$$restProps}
     bind:value
+    bind:this={input}
     on:blur
     on:change
     on:click

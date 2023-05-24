@@ -10,6 +10,7 @@ declare const __propDef: {
         color?: "red" | "green" | "base" | undefined;
         value?: string | undefined;
         label?: string | undefined;
+        input?: HTMLInputElement | undefined;
     };
     events: {
         blur: FocusEvent;

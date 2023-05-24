@@ -10,6 +10,7 @@
   export let color: 'base' | 'green' | 'red' = 'base';
   export let value: string = '';
   export let label: string = '';
+  export let input: HTMLInputElement | undefined = undefined;
 
   const divClasses = {
     filled: 'relative',
@@ -20,7 +21,7 @@
   const inputSizes = {
     filled: {
       small: 'px-2.5 pb-1.5 pt-4',
-      default: 'px-3 pb-2 pt-5',
+      default: 'px-3 pb-2 pt-5'
     },
     outlined: {
       small: 'px-2.5 pb-1.5 pt-3',
@@ -66,17 +67,14 @@
   };
 
   const inputColorClasses = {
-    base:
-      'border-gray-300 focus:ring-gray-300 dark:border-gray-600 dark:focus:ring-gray-600 dark:focus:border-blue-500 focus:border-blue-600',
+    base: 'border-gray-300 focus:ring-gray-300 dark:border-gray-600 dark:focus:ring-gray-600 dark:focus:border-blue-500 focus:border-blue-600',
     green:
       'border-green-600 focus:ring-green-600 dark:border-green-500 dark:focus:ring-green-500 dark:focus:border-green-500 focus:border-green-600',
-    red:
-      'border-red-600 focus:ring-red-600 dark:border-red-500 dark:focus:ring-red-500 dark:focus:border-red-500 focus:border-red-600'
+    red: 'border-red-600 focus:ring-red-600 dark:border-red-500 dark:focus:ring-red-500 dark:focus:border-red-500 focus:border-red-600'
   };
 
   const labelColorClasses = {
-    base:
-      'text-gray-400 dark:text-gray-400 peer-focus:text-blue-600 peer-focus:dark:text-blue-500',
+    base: 'text-gray-400 dark:text-gray-400 peer-focus:text-blue-600 peer-focus:dark:text-blue-500',
     green: 'text-green-600 dark:text-green-500',
     red: 'text-red-600 dark:text-red-500'
   };
@@ -97,6 +95,7 @@
     {id}
     {...$$restProps}
     bind:value
+    bind:this={input}
     on:blur
     on:change
     on:click
